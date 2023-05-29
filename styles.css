@@ -1,0 +1,142 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Outfit", 'Courier New', Courier, monospace;
+  font-weight: 300;
+  color: var(--white);
+  background-color: var(--main-background);
+  padding: 2rem;
+}
+
+main {
+  padding: 1.25rem;
+  background-color: var(--card-background);
+  border-radius: 0.75rem;
+}
+
+main .equilibrium-img {
+  position: relative;
+}
+
+main .equilibrium-img img {
+  border-radius: 0.5rem;
+}
+
+main .equilibrium-img div {
+  position: absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 40%);
+  height: calc(100% - 4px);
+  width: 100%;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+main .equilibrium-img div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+main .equilibrium-img div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .text h2 {
+  padding: 1.25rem 0;
+  font-weight: 600;
+}
+
+main .text h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+main .text p {
+  padding-bottom: 1.25rem;
+  color: hsl(0, 0%, 100%, 50%);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 1.5rem 0;
+  border-bottom: 1.75px solid var(--line)
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+ul li:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+ul li img {
+  padding-right: 0.5rem;
+}
+
+main .profile {
+  display: flex;
+  align-items: center;
+  padding-top: 1.25rem;
+  font-weight: 400;
+}
+
+main .profile img {
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  width: 3.5rem;
+  margin-right: 1rem;
+}
+
+main .profile p {
+  color: hsl(0, 0%, 100%, 60%);
+}
+
+main .profile p span {
+  color: var(--white);
+}
+
+main .profile p span:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+@media (min-width: 475px) {
+  main {
+    width: 400px;
+    margin: auto;
+  }
+}
